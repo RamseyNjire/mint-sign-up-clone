@@ -1,0 +1,21 @@
+/* General rules */
+body{
+    background-color: #ECEEF1;
+}
+
+button {
+    background-color: #0077C5;
+}
+
+.fas {
+    color: white;
+}
+
+img {
+    height: 5%;
+    width: 5%;
+    margin: 0;
+    padding: 0;
+}
+
+
