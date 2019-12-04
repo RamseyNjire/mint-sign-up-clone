@@ -68,7 +68,13 @@ nav {
     height: 60px;
     padding: 10px 30px;
 }
-
+    a {
+        color: var(--link-blue);
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+    }
     .sign-in-container {
         display: flex;
         height: 36px;
@@ -85,11 +91,6 @@ nav {
             font-weight: 400;
         }
 
-            #recovery-link {
-                color: var(--link-blue);
-                text-decoration: none;
-            }
-
         .sign-in-button {
             height: 34px;
             background: var(--link-blue);
@@ -105,7 +106,7 @@ nav {
             font-weight: normal;
         }
 
-            #lock-image {
+            .lock-image {
                 display: inline-block;
                 background-image: url("images/button-lock.png");
                 background-size: contain;
@@ -201,11 +202,14 @@ header {
             background: url("https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-text.svg") no-repeat;
         }
 
-.sign-up-form {
+.form-container {
     height: 80%;
     width: 380px;
     border: 1px solid #c7c7c7;
     border-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
     background-color: white;
     box-shadow: none;
     margin: auto;
@@ -240,14 +244,6 @@ header {
             color: #4c4c4c;
             font-weight: 300;
             line-height: 1.2;
-        }
-
-        #learn-more {
-            color: var(--link-blue);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            font-weight: 300;
-            text-decoration: none;
         }
     
     .form-inputs {
@@ -288,3 +284,101 @@ header {
             padding: 5px 0;
             margin-bottom: 30px;
         }
+
+        .password-container {
+            position: relative;
+        }
+
+        #password-icon {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            height: 32px;
+            width: 34px;
+            background: url(images/lock.png) 0 50%/21px 21px no-repeat;
+        }
+
+        .create-account {
+            height: 44px;
+            width: 100%;
+            min-width: 100px;
+            padding: 6px 12px;
+            margin-bottom: 30px;
+            line-height: 1.43;
+            background: var(--link-blue);
+            border: var(--link-blue);
+            border-radius: 4px;
+            color: white;
+            font-size: 1.125em;
+            text-shadow: none;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.75);
+            white-space: no-wrap;
+        }
+
+        .form-footer {
+            height: 63px;
+            width: 318px;
+            text-align: center;
+            font-style: italic;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .recaptcha {
+            height: 53px;
+            width: 380px;
+            padding: 16px;
+            margin: 0 auto;
+            border: 1px solid #c7c7c7;
+            border-top: none;
+            border-radius: 2px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            color: #8d9096;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            background-color: #eceef1;
+        }
+
+            .recaptcha > a {
+                font-size: 10px;
+            }
+
+footer {
+    height: 100px;
+    width: 100%;
+    padding: 50px auto;
+    color: #505050;
+    text-align: center;
+    font-size: 12px;
+}
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 10px 0;
+    }
+
+        #footer-link-list {
+            display: flex;
+            padding-top: 20px;
+        }
+
+        #footer-link-list > li {
+            margin: 0 5px;
+        }
+
+            .footer-link {
+                color: #505050;
+            }
+
+@media only screen and (min-width: 400px) {
+    .form {
+        min-width: 80%;
+        margin: 0% 25% 0% 25%;
+        padding: 0px 10px 0px 10px;
+    }
+}

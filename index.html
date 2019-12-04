@@ -12,10 +12,10 @@
         <div class="sign-in-container">
             <div class="account-prompt">
                 <div>Already have an Intuit account?</div>
-                <a id="recovery-link" href="#">I forgot my User ID or Password</a>
+                <a href="#">I forgot my User ID or Password</a>
             </div>
             <button class="sign-in-button">
-                <span id="lock-image"></span>
+                <span class="lock-image"></span>
                 Sign In
             </button>
         </div>
@@ -36,23 +36,49 @@
                 <li class="cursor-pointer" id="mint-text"></li>
             </ul>
         </div>
-        <form class="sign-up-form" action="#" method="POST">
-            <header class="form-header-container">
-                <h2>Create an Intuit account</h2>
-                <p>One account for everything Intuit. <a id="learn-more" href="#">Learn more</a></p>
-            </header>
-            <fieldset class="form-inputs">
-                <label for="email">Email Address</label>
-                <input type="email" name="email" required>
-                <label for="phone">Phone (recommended)</label>
-                <input type="tel" name="phone">
-                <h6 id="rate-disclaimer">Standard call, messaging or data rates may apply.</h6>
-                <label for="password">Password</label>
-                <div class="password-container">
-                    <input type="password" name="password" required>
-                    <span id="password-icon"></span>
-                </div>
-            </fieldset>
-        </form>
+        <div class="form-container">
+            <form class="sign-up-form" action="#" method="POST">
+                <header class="form-header-container">
+                    <h2>Create an Intuit account</h2>
+                    <p>One account for everything Intuit. <a href="#">Learn more</a></p>
+                </header>
+                <fieldset class="form-inputs">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" required>
+                    <label for="phone">Phone (recommended)</label>
+                    <input type="tel" name="phone">
+                    <h6 id="rate-disclaimer">Standard call, messaging or data rates may apply.</h6>
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" name="password" required>
+                        <span id="password-icon"></span>
+                    </div>
+                    <button class="create-account cursor-pointer">
+                        <span class="lock-image"></span>
+                        Create Account
+                    </button>
+                </fieldset>
+            </form>
+            <div class="form-footer">
+                By clicking Create Account, you agree to our
+                <br>
+                <a href="#">Terms</a>
+                and have read and acknowledge our <a href="#">Privacy Statement</a>
+            </div>
+        </div>
+        <div class="recaptcha">
+            Invisible reCAPTCHA by Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.
+        </div>
     </main>
+    <footer>
+        <div class="footer-links">
+            <ul id="footer-link-list">
+                <li><a class="footer-link" href="#">Legal</a></li>
+                <li><a class="footer-link" href="#">Privacy</a></li>
+                <li><a class="footer-link" href="#">Security</a></li>
+            </ul>
+        </div>
+        © 2019 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>
+                    Terms and conditions, features, support, pricing, and service options subject to change without notice.
+    </footer>
 </html>
