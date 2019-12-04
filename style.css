@@ -1,149 +1,290 @@
-/* General rules */
-body{
-    background-color: #ECEEF1;
+:root {
+    --intuit-background: #eceef1;
+    --link-blue: #0077c5;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
     font-family: AvenirNext,Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: var(--intuit-background);
 }
 
-input {
-    width: 99%;
-    height: 15px;
-    padding: 10px 0 10px 0;
-    border: 1px solid #ECEEF1;
-    border-radius: 1px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
-button {
-    color: white;
-    border-radius: 4px;
-    border: 1px solid #4c4c4c;
-    background-color: #0077C5;
+ol, ul {
+	list-style: none;
 }
 
-a {
-    text-decoration: none;
+blockquote, q {
+	quotes: none;
 }
 
-.fas {
-    color: white;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 
-img {
-    height: 45%;
-    width: 65%;
-    margin: 0;
-    padding: 0;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60px;
+    padding: 10px 30px;
+}
 
-/* The header section */
+    .sign-in-container {
+        display: flex;
+        height: 36px;
+        width: 298px;
+        color: #505050;
+    }
+
+        .account-prompt {
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: right;
+            font-weight: 400;
+        }
+
+            #recovery-link {
+                color: var(--link-blue);
+                text-decoration: none;
+            }
+
+        .sign-in-button {
+            height: 34px;
+            background: var(--link-blue);
+            border-radius: 4px;
+            border: 1px solid #4c4c4c;
+            margin-left: 5px;
+            padding: 0 20px;
+            color: white;
+            cursor: pointer;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+
+            #lock-image {
+                display: inline-block;
+                background-image: url("images/button-lock.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 1em;
+                width: 0.8em;
+                margin-top: 2px;
+                margin-right: 4px;
+                padding: 0;
+                vertical-align: text-top;
+            }
+
 header {
+    height: 75px;
+    padding: 20px 0;
+}
+
+    .logo-container {
+        height: 35px;
+        margin: 0 auto;
+    }
+
+        #intuit-logo {
+            display: block;
+            padding: 0;
+            text-decoration: none;
+            background-position: 0 0;
+            width: 118px;
+            height: 35px;
+            background-image: url("images/intuit-logo.png");
+            margin: 0 auto;
+        }
+.ecosystem-icons-container {
     display: flex;
-    float: right;
+    justify-content: center;
+    height: 23px;
+    padding: 0;
+    margin-bottom: 19px;
 }
 
-/* Two lines near the sign in button */
-.other-actions {
-    margin: -23px 20px 0px 0px;
-}
+    .ecosystem-icon-field {
+        display: block;
+        display: flex;
+        align-items: center;
+        height: 23px;
+        width: 318px;
+        padding: 0;
+    }
 
-/* Forgot my password line */
-.forgot-password {
-    margin: -20px 0px 0px 0px;
-}
+        .ecosystem-icons {
+            width: 23px;
+            height: 23px;
+            display: inline-block;
+            margin-right: 4px;
+        }
 
-/* The sign in button */
-.sign-in-button {
-    float: right;
-    height: 30px;
-    padding: 0 20px 0 20px;
-}
+        .cursor-pointer {
+            cursor: pointer;
+        }
 
-.main {
-    padding: 40px 0px 0px 0px;
-}
+        .text-margin {
+            margin-right: 9px;    
+        }
 
-/* section above the form */
-.above-form {
-    display: flex;
-    flex-direction: column;
-    padding: 2px 40% 2px 40%;
-}
+        #turbotax-icon {
+            background: url("https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/tt-favicon@2x.svg") no-repeat;
+        }
 
-.product-logos {
-    display: flex;
-}
+        #turbotax-text {
+            height: 22px;
+            width: 74px;
+            background: url("https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/turbo-tax-text.svg") no-repeat;
+        }
 
-/* Enclosing form */
-.form {
-    display: flex;
-    flex-direction: column;
+        #quickbooks-icon {
+            background: url("https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/quickbooks-favicon@2x.svg") no-repeat;
+        }
+
+        #quickbooks-text {
+            height: 22px;
+            width: 98px;
+            background: url("https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/quick-books-text.svg") no-repeat;
+        }
+
+        #mint-icon {
+            background: url("https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-favicon.svg") no-repeat;
+        }
+
+        #mint-text {
+            width: 37px;
+            height: 22px;
+            margin-right: 0;
+            background: url("https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-text.svg") no-repeat;
+        }
+
+.sign-up-form {
+    height: 80%;
+    width: 380px;
     border: 1px solid #c7c7c7;
     border-radius: 2px;
-    margin: 0% 35.4% 0% 35.4%;
-    padding: 0px 10px 0px 10px;
-    background-color: #fff;
+    background-color: white;
+    box-shadow: none;
+    margin: auto;
+    padding: 30px;
+    outline: none;
+    overflow: visible;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
 }
 
-.top-form {
-    text-align: center;
-}
-
-.learn-more {
-    margin: -17px 0px 10px 0px;
-}
-
-/* The fieldset inside the form tag */
-.form-inputs {
-    display: flex;
-}
-
-.call-rates > h6 {
-    padding: 0;
-    margin: 0;
-}
-
-#open-lock {
-    height: 10%;
-    width: 10%
-    /* background-color: red; */
-}
-
-.password-field {
-    background: url(images/lock.png)no-repeat 100%;
-    background-size: 16px;
-    padding-right: 5px;
-}
-
-fieldset {
-    border: none;
-}
-
-/* Text under the form elements */
-.form > p {
-    padding: 0px 15px 0px 15px;
-    text-align: center;
-}
-
-#captcha-section {
-    padding: 10px ;
-    margin: 0px -10px 0px -10px;
-    width: inherit;
-    background-color: #ECEEF1;
-}
-
-/* The footer section */
-.footer {
-    margin: 4% 30% 0% 30%;
-}
-
-footer > p {
-    text-align: center;
-}
-
-@media only screen and (min-width: 400px) {
-    .form {
-        min-width: 80%;
-        margin: 0% 25% 0% 25%;
-        padding: 0px 10px 0px 10px;
+    .form-header-container {
+        text-align: center;
+        padding-bottom: 20px;
+        margin: 0;
+        outline: 0;
+        font-family: Arial, Helvetica, sans-serif;
     }
-}
+
+        .form-header-container > h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            color: #4c4c4c;
+            line-height: 1.1;
+        }
+
+        .form-header-container > p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #4c4c4c;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        #learn-more {
+            color: var(--link-blue);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            text-decoration: none;
+        }
+    
+    .form-inputs {
+        text-align: left;
+    }
+        [for] {
+            display: block;
+            color: #404040;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            padding-bottom: 6px;
+        }
+        [type] {
+            height: 34px;
+            width: 320px;
+            min-width: 160px;
+            padding-right: 6px;
+            padding-left: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #c1c5c8;
+            outline: none;
+            border-radius: 3px;
+            line-height: 1.3em;
+            color: black;
+            font-family: inherit;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        [type=tel] {
+            margin-bottom: 0;
+        }
+
+        #rate-disclaimer {
+            color: #444;
+            font-size: 10px;
+            padding: 5px 0;
+            margin-bottom: 30px;
+        }
